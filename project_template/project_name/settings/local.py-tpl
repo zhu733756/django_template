@@ -1,0 +1,129 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/7/24 16:17
+# @Author  : zhu733756
+# @FileName: local.py
+
+from .base import * # NOQA
+
+DEBUG = True
+
+###session和缓存
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache' # 引擎
+SESSION_CACHE_ALIAS = 'defaultSessionKey'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/2',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+             # "PASSWORD": "",
+        },
+    },
+    'defaultSessionKey': {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+}
+
+REDIS_TIMEOUT=1*24*60*60
+CUBES_REDIS_TIMEOUT=60*60
+NEVER_REDIS_TIMEOUT=365*24*60*60
+
+##数据库映射路由
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/2',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+             # "PASSWORD": "",
+        },
+    },
+    'defaultSessionKey': {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+}
+
+REDIS_TIMEOUT=1*24*60*60
+CUBES_REDIS_TIMEOUT=60*60
+NEVER_REDIS_TIMEOUT=365*24*60*60
+
+##数据库映射路由
+DATABASE_APPS_MAPPING = {
+    'server':'default',
+    'accounts':'default2',
+}
+
+###数据库配置
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    },
+    'default2':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    },
+}
+
+####日志
+def _(prefix, level='DEBUG'):
+    return {
+        'level': level,
+        'class': 'logging.handlers.RotatingFileHandler',
+        'filename': os.path.join(BASE_DIR, 'log', prefix),
+        'maxBytes': 1024 * 1024 * 200,
+        'backupCount': 365 * 10,
+        'formatter': 'standard',
+    }
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '【{{ project_name }}】%(asctime)s %(thread)d %(process)d %(levelname)s %(lineno)s %(pathname)s %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'DEBUG',
+            'formatter': 'standard',
+        },
+
+        '{{ project_name }}_file': _('{{ project_name }}_debug.log'),
+        '{{ project_name }}_file_error': _('{{ project_name }}_error.log', level='ERROR'),
+    },
+}
+if DEBUG:
+    LOGGING['loggers'] = {
+        'filehandler': {
+            'handlers': ['console', '{{ project_name }}_file', '{{ project_name }}_file_error'],
+            'level': 'DEBUG',
+        },
+    }
+else:
+    LOGGING['loggers'] = {
+        'filehandler': {
+            'handlers': ['{{ project_name }}_file', '{{ project_name }}_file_error'],
+            'level': 'DEBUG',
+        },
+    }
