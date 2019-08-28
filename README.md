@@ -1,1 +1,1 @@
-"# django_tempale" 
+"# django temp" 
