@@ -1,0 +1,9 @@
+.idea
+.DS_Store
+.git
+.vs
+*.pyc
+*.log
+*.DS_Store
+data/
+node_modules
