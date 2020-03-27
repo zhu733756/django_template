@@ -14,7 +14,7 @@ SESSION_CACHE_ALIAS = 'defaultSessionKey'
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/2',
+        'LOCATION': 'redis://127.0.0.1:6379/0',
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
              # "PASSWORD": "",
@@ -22,7 +22,7 @@ CACHES = {
     },
     'defaultSessionKey': {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/2",
+        "LOCATION": "redis://127.0.0.1:6379/0",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -35,8 +35,13 @@ NEVER_REDIS_TIMEOUT=365*24*60*60
 
 ##数据库映射路由
 DATABASE_APPS_MAPPING = {
-    'server':'default',
-    'accounts':'default2',
+    "admin":"default",
+    "auth":"default",
+    "contenttypes":"default",
+    "sessions":"default",
+    "auth_permission":"default",
+    'authtoken':"default"，
+	'core':"default",#自定义app
 }
 
 ###数据库配置

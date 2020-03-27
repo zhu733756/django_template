@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00ed89ff-7494-4c22-849e-3e0e67d71df0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_template/urls.py-tpl" beforeDir="false" afterPath="$PROJECT_DIR$/app_template/urls.py-tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_template/project_name/settings/base.py-tpl" beforeDir="false" afterPath="$PROJECT_DIR$/project_template/project_name/settings/base.py-tpl" afterDir="false" />
-    </list>
+    <list default="true" id="00ed89ff-7494-4c22-849e-3e0e67d71df0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project_template/project_name/urls.py-tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
@@ -91,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project_template/project_name/settings/base.py-tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="-361">
               <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
@@ -233,19 +228,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\django" />
+      <recent name="E:\django\app_template" />
+      <recent name="E:\django\project_template\project_name" />
+      <recent name="E:\django\project_template\settings" />
+      <recent name="E:\django\project_settings\settings" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\django\project_template\project_name" />
       <recent name="E:\django\tools" />
       <recent name="E:\django" />
       <recent name="E:\django\project_settings" />
       <recent name="E:\django\settings\secret" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\django\app_template" />
-      <recent name="E:\django\project_template\project_name" />
-      <recent name="E:\django\project_template\settings" />
-      <recent name="E:\django\project_settings\settings" />
-      <recent name="E:\django" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,18 +319,17 @@
       <updated>1563956235199</updated>
       <workItem from="1563956236386" duration="6227000" />
       <workItem from="1564039040184" duration="9549000" />
-      <workItem from="1566977890012" duration="241000" />
+      <workItem from="1566977890012" duration="690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16017000" />
+    <option name="totallyTimeSpent" value="16466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -350,7 +344,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Regex Tester" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.33002833" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.33002833" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32956153" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -487,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_template/project_name/settings/base.py-tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_template/urls.py-tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -512,6 +499,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_template/project_name/settings/base.py-tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
