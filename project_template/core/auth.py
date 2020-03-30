@@ -39,9 +39,8 @@ class ObtainExpiringAuthToken(ObtainAuthToken):
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
-            token, created = Token.objects.get_or_create(
-                user=serializer.validated_data['user'])
-
+            user = serializer.validated_data['user']
+            token, created = Token.objects.get_or_create(user=user)
             utc_now = datetime.utcnow()
             if not created and token.created < utc_now - timedelta(
                     hours=expiring_hour):
