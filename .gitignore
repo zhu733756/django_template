@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+.history
 .git
 .vs
 *.pyc
