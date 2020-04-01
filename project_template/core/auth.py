@@ -3,8 +3,11 @@ from django.utils.translation import ugettext_lazy as _
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.models import Token
 from django.http import HttpResponse
+from rest_framework import status
+from rest_framework.response import Response
 from datetime import datetime, timedelta
 from django.conf import settings
+
 import json
 
 expiring_hour = settings.TOKEN_LIFETIME or 24
@@ -52,7 +55,6 @@ class ObtainExpiringAuthToken(ObtainAuthToken):
             return HttpResponse(json.dumps(response_data),
                                 content_type="application/json")
 
-            return Response({'token': token.key})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
